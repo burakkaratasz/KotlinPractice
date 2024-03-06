@@ -12,8 +12,7 @@ fun main() {
     val string = "börek"
     println("$string içerisindeki e sayısı ${string.howMuchE()}")
 
-
-
+    parkingPrice(3)
 
 }
 
@@ -44,5 +43,38 @@ fun String.howMuchE(): Int {
     }
     return count
 }
+
+fun angleOfNum(angleNum: Int) {
+    var result = "the result is: ${((angleNum - 2) * 180) / 2}"
+    println(result)
+}
+
+fun calSalary(day: Int): Int {
+    var salary = 0
+    var shift = 0
+    if (day <= 18) {
+        salary = (8 * 40) * day
+    }
+    else if (day > 18) {
+        shift = day - 18
+        salary = ((8 * 40) * 18) + ((80 * 8) * shift)
+    }
+    return salary
+}
+
+fun parkingPrice(hourse: Int) {
+    var result = 0
+    if (hourse == 1) {
+        result = 50
+        println("borcunuz: $result")
+    }
+    else {
+        result = hourse - 1
+        result = (result * 10) + 50
+        println("borcunuz: $result")
+    }
+}
+
+
 
 
