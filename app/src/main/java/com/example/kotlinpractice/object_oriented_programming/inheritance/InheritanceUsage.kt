@@ -9,4 +9,20 @@ fun main() {
     println(bosphorusVilla.isGarage)
     println(bosphorusVilla.windowNum)
 
+    if (topkapiPalace is Palace) {
+        println("saraydır")
+    }
+    else {
+        println("saray değildir")
+    }
+
+    //Upcasting
+    val home: Home = bosphorusVilla //villa'yı eve dönüştürme
+
+    //Downcasting
+    val home2 = Home(7)
+    val palace = home2 as Palace
+
+
+
 }
